@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EWC 2026 VALORANT 승부예측</title>
+    <meta
+      name="description"
+      content="EWC 2026 VALORANT 플레이오프 승부예측 팬 이벤트 페이지"
+    >
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#intro">소개</a>
+        <a href="#rules">규칙</a>
+        <a href="#submit">예측 제출</a>
+        <a href="#leaderboard">순위표</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro" class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Unofficial Fan Event</p>
+          <h1>EWC 2026 VALORANT 승부예측</h1>
+          <p>
+            플레이오프부터 결승까지 결과를 예측하고, 공개 순위표에서 점수를
+            확인하는 디시인사이드 갤러리용 팬 이벤트 페이지입니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#submit">예측 제출</a>
+            <a class="button secondary" href="#leaderboard">순위표 보기</a>
+          </div>
+        </div>
+        <aside class="deadline-panel" aria-labelledby="deadline-title">
+          <h2 id="deadline-title">제출 마감</h2>
+          <p id="deadlineText">마감 시간을 불러오는 중입니다.</p>
+          <p id="countdownText" class="countdown">-</p>
+        </aside>
+      </section>
+
+      <section class="section split">
+        <article id="schedule" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Playoff</p>
+            <h2>경기 일정</h2>
+          </div>
+          <div id="scheduleList" class="schedule-list"></div>
+        </article>
+
+        <article id="rules" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Rules</p>
+            <h2>참가 규칙</h2>
+          </div>
+          <ul class="rules-list">
+            <li>1인 1회 제출이며, 동일 닉네임 또는 동일 디시 식별번호 중복 제출은 최초 제출만 인정합니다.</li>
+            <li>제출 후 수정은 불가합니다.</li>
+            <li>제출한 닉네임과 점수는 공개 순위표에 표시될 수 있습니다.</li>
+            <li>수집 항목은 닉네임, 참가 확인코드, 디시 식별번호, 예측값입니다.</li>
+            <li>디시 식별번호는 중복 제출 확인과 당첨자 확인 목적으로만 사용하며 공개하지 않습니다.</li>
+            <li>참가 확인코드는 당첨자 본인 확인용이며, 실제 비밀번호는 절대 입력하지 마세요.</li>
+            <li>주소, 전화번호, 이메일은 제출 단계에서 받지 않고 당첨자 확정 후 별도로 확인합니다.</li>
+            <li>부정 참가가 의심되면 운영진 판단으로 제외될 수 있습니다.</li>
+            <li>이 페이지는 비공식 팬 이벤트이며 EWC, Riot Games와 무관합니다.</li>
+          </ul>
+          <div class="notice-box">
+            <strong>개인정보 수집 안내</strong>
+            <p>
+              닉네임, 참가 확인코드, 디시 식별번호는 중복 제출 확인과 당첨자 본인 확인을 위해서만 사용합니다.
+              공개 순위표에는 닉네임, 점수, 적중 수, 제출 시간만 표시하며 디시 식별번호와 참가 확인코드는 공개하지 않습니다.
+              이벤트 종료 후 운영 확인이 끝나면 제출 원본은 삭제하는 것을 원칙으로 합니다.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section id="submit" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Prediction</p>
+          <h2>예측 제출</h2>
+        </div>
+
+        <form id="predictionForm" class="prediction-form">
+          <label class="field">
+            <span>닉네임</span>
+            <input
+              id="nickname"
+              name="nickname"
+              type="text"
+              maxlength="20"
+              placeholder="2~20자"
+              autocomplete="nickname"
+              required
+            >
+          </label>
+
+          <div class="identity-grid">
+            <label class="field">
+              <span>참가 확인코드</span>
+              <input
+                id="participantCode"
+                name="participantCode"
+                type="text"
+                minlength="4"
+                maxlength="12"
+                placeholder="영문/숫자 4~12자"
+                autocomplete="off"
+                required
+              >
+              <small>당첨자 본인 확인용입니다. 쓰던 비밀번호는 입력하지 마세요.</small>
+            </label>
+
+            <label class="field">
+              <span>디시 식별번호</span>
+              <input
+                id="dcIdentifier"
+                name="dcIdentifier"
+                type="text"
+                maxlength="80"
+                placeholder="반고닉/고닉 식별번호"
+                autocomplete="off"
+                required
+              >
+              <small>반고닉은 식별번호를 입력하세요. 중복/당첨자 확인용이며 공개하지 않습니다.</small>
+            </label>
+          </div>
+
+          <div id="formMount" class="prediction-grid"></div>
+
+          <label class="field">
+            <span>결승 스코어</span>
+            <select id="finalScore" name="finalScore" required></select>
+          </label>
+
+          <label class="agreement">
+            <input id="agreement" type="checkbox" required>
+            <span>수집 항목, 운영 규칙, 닉네임 공개 안내를 확인했습니다.</span>
+          </label>
+
+          <div id="formMessage" class="message" role="status" aria-live="polite"></div>
+
+          <button id="submitButton" class="button primary submit-button" type="submit">
+            제출하기
+          </button>
+        </form>
+      </section>
+
+      <section id="leaderboard" class="section">
+        <div class="section-heading row-heading">
+          <div>
+            <p class="eyebrow">Leaderboard</p>
+            <h2>공개 순위표</h2>
+          </div>
+          <button id="refreshLeaderboard" class="button secondary" type="button">새로고침</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>닉네임</th>
+                <th>총점</th>
+                <th>적중</th>
+                <th>제출 시간</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+              <tr>
+                <td colspan="5">순위표를 불러오는 중입니다.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="admin" class="section panel">
+        <div class="section-heading">
+          <p class="eyebrow">Admin</p>
+          <h2>운영자용 시트 구조</h2>
+        </div>
+        <p>
+          Google Sheets에는 <strong>Submissions</strong>, <strong>Results</strong>,
+          <strong>Leaderboard</strong>, <strong>Config</strong> 시트를 만듭니다.
+          자세한 열 구조와 배포 방법은 함께 제공된 <code>README.md</code>와
+          <code>apps-script-code.gs</code>를 확인하세요.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>비공식 팬 이벤트입니다. 실제 일정과 대진은 운영자가 업데이트해야 합니다.</p>
+    </footer>
+
+    <script src="./config.js?v=20260703-9"></script>
+    <script src="./script.js?v=20260703-9"></script>
+  </body>
+</html>
