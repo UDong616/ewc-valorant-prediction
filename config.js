@@ -1,7 +1,7 @@
 window.EVENT_CONFIG = {
   eventName: "EWC 2026 VALORANT 승부예측",
 
- webAppUrl: "https://script.google.com/macros/s/AKfycbzetWeO0nh82sXIOjHJzCK0H0V7EWJsKNJcaoPjGug-yDyCJZbGyskVvGaksQ16OhLo/exec",
+  webAppUrl: "https://script.google.com/macros/s/AKfycbzetWeO0nh82sXIOjHJzCK0H0V7EWJsKNJcaoPjGug-yDyCJZbGyskVvGaksQ16OhLo/exec",
 
   // 첫 8강 경기 시작 시각 기준입니다.
   submissionDeadline: "2026-07-09T20:00:00+09:00",
@@ -16,28 +16,28 @@ window.EVENT_CONFIG = {
       title: "8강 1경기",
       startsAt: "2026-07-09T20:00:00+09:00",
       displayTime: "2026. 7. 9. 오후 8:00 KST",
-      teams: ["Team A", "Team B"]
+      teams: ["100 Thieves", "MIBR"]
     },
     {
       id: "qf2",
       title: "8강 2경기",
       startsAt: "2026-07-09T22:45:00+09:00",
       displayTime: "2026. 7. 9. 오후 10:45 KST",
-      teams: ["Team C", "Team D"]
+      teams: ["Team Vitality", "Nongshim RedForce"]
     },
     {
       id: "qf3",
       title: "8강 3경기",
       startsAt: "2026-07-10T20:00:00+09:00",
       displayTime: "2026. 7. 10. 오후 8:00 KST",
-      teams: ["Team E", "Team F"]
+      teams: ["Team Heretics", "BBL Esports"]
     },
     {
       id: "qf4",
       title: "8강 4경기",
       startsAt: "2026-07-10T22:45:00+09:00",
       displayTime: "2026. 7. 10. 오후 10:45 KST",
-      teams: ["Team G", "Team H"]
+      teams: ["Gentle Mates", "NRG"]
     }
   ],
 
@@ -45,28 +45,28 @@ window.EVENT_CONFIG = {
     {
       id: "qf1",
       title: "8강 1경기",
-      matchup: "Team A vs Team B",
+      matchup: "100 Thieves vs MIBR",
       startsAt: "2026-07-09T20:00:00+09:00",
       displayTime: "2026. 7. 9. 오후 8:00 KST"
     },
     {
       id: "qf2",
       title: "8강 2경기",
-      matchup: "Team C vs Team D",
+      matchup: "Team Vitality vs Nongshim RedForce",
       startsAt: "2026-07-09T22:45:00+09:00",
       displayTime: "2026. 7. 9. 오후 10:45 KST"
     },
     {
       id: "qf3",
       title: "8강 3경기",
-      matchup: "Team E vs Team F",
+      matchup: "Team Heretics vs BBL Esports",
       startsAt: "2026-07-10T20:00:00+09:00",
       displayTime: "2026. 7. 10. 오후 8:00 KST"
     },
     {
       id: "qf4",
       title: "8강 4경기",
-      matchup: "Team G vs Team H",
+      matchup: "Gentle Mates vs NRG",
       startsAt: "2026-07-10T22:45:00+09:00",
       displayTime: "2026. 7. 10. 오후 10:45 KST"
     },
