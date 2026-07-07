@@ -1,7 +1,7 @@
 window.EVENT_CONFIG = {
   eventName: "EWC 2026 VALORANT 승부예측",
 
-  webAppUrl: "https://script.google.com/macros/s/AKfycbzetWeO0nh82sXIOjHJzCK0H0V7EWJsKNJcaoPjGug-yDyCJZbGyskVvGaksQ16OhLo/exec",
+  webAppUrl: "https://script.google.com/macros/s/AKfycbz8ec00k8cpoes7haIdkYD7Ze30DHun_4cFXiZaoj8UdBkB0bng8teuqN8XRGLQC-Ze/exec",
 
   // 첫 8강 경기 시작 시각 기준입니다.
   submissionDeadline: "2026-07-09T20:00:00+09:00",
